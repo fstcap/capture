@@ -1,11 +1,11 @@
-#import dpkt
+import ssl
 from scapy.all import *
 from threading import Thread, Event
 from time import sleep
 
 class Sniffer(Thread):
     def  __init__(self, interface='en0'):
-        super().__init__()
+        super(Sniffer, self).__init__()
 
         self.daemon = True
 
